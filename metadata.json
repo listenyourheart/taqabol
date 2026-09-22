@@ -1,0 +1,6 @@
+{
+  "name": "Taqaboul - Comparateur des Programmes Politiques Maroc",
+  "description": "Plateforme citoyenne comparative, bilingue (arabe/français) et accessible des visions économiques et sociales des partis politiques marocains.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

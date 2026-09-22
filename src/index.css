@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  html[dir="rtl"] {
+    font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  html[dir="ltr"] {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #f6f2e8;
+    background-image: 
+      radial-gradient(#d5cebe 0.75px, transparent 0.75px),
+      radial-gradient(#e2dcce 0.75px, #f6f2e8 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    color: #1c1917;
+  }
+}
+
+/* Authentic Newspaper / Broadsheet Typography & Elements */
+.font-newspaper-title {
+  font-family: 'Playfair Display', 'Amiri', Georgia, serif;
+}
+
+html[dir="rtl"] .font-newspaper-title,
+html[dir="rtl"] .font-newspaper-serif {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+}
+
+html[dir="ltr"] .font-newspaper-title,
+html[dir="ltr"] .font-newspaper-serif {
+  font-family: 'Playfair Display', 'Newsreader', Georgia, serif;
+}
+
+/* Classic double-rule newspaper separator (thick line over thin line) */
+.newspaper-double-border-b {
+  border-bottom: 3px double #292524;
+}
+
+.newspaper-double-border-t {
+  border-top: 3px double #292524;
+}
+
+.newspaper-rule {
+  height: 6px;
+  border-top: 3px solid #1c1917;
+  border-bottom: 1px solid #78716c;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.newspaper-rule-thin {
+  height: 3px;
+  border-top: 1px solid #1c1917;
+  border-bottom: 1px solid #1c1917;
+}
+
+/* Authentic newsprint paper container with crisp ink borders and subtle ink shadow */
+.newspaper-sheet {
+  background-color: #faf7ee;
+  border: 1px solid #292524;
+  box-shadow: 2px 2px 0px #1c1917;
+}
+
+/* Newspaper rubber stamp style */
+.newspaper-stamp {
+  border: 2px dashed #7f1d1d;
+  color: #7f1d1d;
+  display: inline-block;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transform: rotate(-1.5deg);
+}
+
+/* Custom smooth scroll and accessible focus states */
+:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+/* Print optimizations for citizens and researchers */
+@media print {
+  header, nav, button.no-print, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+}
